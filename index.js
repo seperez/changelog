@@ -1,8 +1,8 @@
 const fs = require('fs');
 const qrcode = require('qrcode-terminal');
 const { Client } = require('whatsapp-web.js');
-const { handleMessage } = require('./lib/commands');
 const { SESSION_FILE_PATH } = require('./lib/config');
+const { handleMessage } = require('./lib/commands');
 
 let sessionData;
 if(fs.existsSync(SESSION_FILE_PATH)) {
