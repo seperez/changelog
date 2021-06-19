@@ -5,16 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "dev": "NODE_ENV=development node index.js",
+    "start": "NODE_ENV=production pm2 start ./index.js",
+    "stop": "pm2 kill"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "nodemon": "^2.0.7",
+    "pm2": "^4.5.6",
     "qrcode-terminal": "^0.12.0",
     "whatsapp-web.js": "^1.12.6"
   },
   "devDependencies": {
-    "eslint": "^7.27.0"
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb-base": "^14.2.1"
   }
 }
